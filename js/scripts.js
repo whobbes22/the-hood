@@ -7,7 +7,12 @@ function getInput(event){
 }
 
 function transform(num){
-  console.log(num);
+
+  let numArray = [];
+  for(let i =0; i<=num; i++){
+    numArray.push(i);
+  }
+  console.log(numArray);
 }
 
 
