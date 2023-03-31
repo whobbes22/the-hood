@@ -8,9 +8,17 @@ function getInput(event){
 
 function transform(num){
 
+  if(num === 1){
+    console.log("beep");
+  } else if (num === 2){
+    console.log("boop");
+  } else{
+    console.log("the hood");
+  }
   let numArray = [];
   for(let i =0; i<=num; i++){
     numArray.push(i);
+    
   }
   console.log(numArray);
 }
