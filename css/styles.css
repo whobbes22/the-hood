@@ -1,12 +1,19 @@
 body{
   margin-left: 10%;
   margin-right: 10%;
+  background-color: rgba(3, 3, 3, 0.904);
+
 }
 #buttons{
   text-align: center;
-  color: #9901AD  ;
+  color: #dad707;
+  /* 9901AD */
 }
 
 .hidden{
   display: none;
+}
+
+.resultsBG{
+  background-color: black;
 }
