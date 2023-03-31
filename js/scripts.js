@@ -1,19 +1,28 @@
 // not UI logic
 
 function getInput(){
-  const num1 = parseInt(document.querySelector("input#num1").value);
-  return num1;
+  return parseInt(document.querySelector("input#num1").value);
+}
+
+function getName(){
+  const name = document.querySelector("input#name1").value
+  if(name === ""){
+    return ","
+  } else{
+    return " " + name;
+  }
 }
 
 function transform(event){
   event.preventDefault();
   const num = getInput();
+  const name = getName();
   let numArray = [];
 
   for(let i =0; i<=num; i++){
     let iArray = i.toString().split("");
     if(iArray.includes("3")){
-      numArray.push(" Welcome to the hood");
+      numArray.push(" Welcome to the hood" + name + " enjoy your stay!");
     } else if (iArray.includes("2")){
       numArray.push(" Boop!");
     } else if(iArray.includes("1")){
