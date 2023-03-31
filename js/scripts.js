@@ -13,8 +13,14 @@ function getName(){
   }
 }
 
-function transform(event){
+function transformReverse(event){
   event.preventDefault();
+  transform(true);
+
+}
+
+function transform(boo){
+  console.log(boo); 
   const num = getInput();
   const name = getName();
   let numArray = [];
@@ -37,8 +43,10 @@ function transform(event){
 // UI logic
 
 window.addEventListener("load", function(){
-  const num = document.querySelector("form#num");
-  num.addEventListener("submit", transform);
+  const num = document.querySelector("button#go");
+  const rev = document.querySelector("button#reversed")
+  num.addEventListener("click", transform);
+  rev.addEventListener("click", transformReverse);
 });
 
 function displayResults(numArray){
