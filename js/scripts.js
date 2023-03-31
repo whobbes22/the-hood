@@ -1,41 +1,37 @@
 // not UI logic
 
-function getInput(event){
-  event.preventDefault();
+function getInput(){
   const num1 = parseInt(document.querySelector("input#num1").value);
-  transform(num1);  
+  return num1;
 }
 
-function transform(num){
-
+function transform(event){
+  event.preventDefault();
+  const num = getInput();
   let numArray = [];
-  let transferArray = [1,2,3];
+
   for(let i =0; i<=num; i++){
-    
-   // console.log(transferArray.includes(i),i);
     let iArray = i.toString().split("");
-    console.log(iArray.includes("1"),iArray.includes("2"),iArray.includes("3"));
-    
-    console.log(iArray);
-
-  if(iArray.includes("3")){
-    numArray.push("The hood");
-  } else if (iArray.includes("2")){
-    numArray.push("Boop!");
-  } else if(iArray.includes("1")){
-    numArray.push("Beep!");
-  } else{
-    numArray.push(i);
+    if(iArray.includes("3")){
+      numArray.push(" The hood");
+    } else if (iArray.includes("2")){
+      numArray.push(" Boop!");
+    } else if(iArray.includes("1")){
+      numArray.push(" Beep!");
+    } else{
+      numArray.push(" "+i);
+    }   
   }
-    
-  }
-  console.log(numArray);
+  displayResults(numArray);
 }
-
 
 // UI logic
 
 window.addEventListener("load", function(){
   const num = document.querySelector("form#num");
-  num.addEventListener("submit", getInput);
+  num.addEventListener("submit", transform);
 });
+
+function displayResults(numArray){
+  document.querySelector("p#results").innerText = numArray;
+}
