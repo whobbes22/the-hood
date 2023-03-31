@@ -19,8 +19,13 @@ function transformReverse(event){
 
 }
 
-function transform(boo){
-  console.log(boo); 
+function notTransformReverse(event){
+  event.preventDefault();
+  transform(false);
+}
+
+function transform(isReversed){
+  console.log(isReversed);
   const num = getInput();
   const name = getName();
   let numArray = [];
@@ -37,7 +42,11 @@ function transform(boo){
       numArray.push(" "+i);
     }   
   }
-  displayResults(numArray);
+  if(isReversed){
+    displayResults(numArray.reverse());
+  } else {
+    displayResults(numArray);
+  }
 }
 
 // UI logic
@@ -45,7 +54,7 @@ function transform(boo){
 window.addEventListener("load", function(){
   const num = document.querySelector("button#go");
   const rev = document.querySelector("button#reversed")
-  num.addEventListener("click", transform);
+  num.addEventListener("click", notTransformReverse);
   rev.addEventListener("click", transformReverse);
 });
 
