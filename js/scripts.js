@@ -13,7 +13,7 @@ function transform(event){
   for(let i =0; i<=num; i++){
     let iArray = i.toString().split("");
     if(iArray.includes("3")){
-      numArray.push(" The hood");
+      numArray.push(" Welcome to the hood");
     } else if (iArray.includes("2")){
       numArray.push(" Boop!");
     } else if(iArray.includes("1")){
