@@ -48,6 +48,30 @@ function transform(isReversed){
   }
 }
 
+function randomColor(){
+  let c = "color: #";
+  for(let i = 0; i<6; i++){
+    const rando = Math.round(Math.random() *15);
+    if(rando === 10){
+      c+="A";
+    } else if(rando === 11){
+      c+="B";
+    } else if(rando === 12){
+      c+="C";
+    } else if(rando === 13){
+      c+="D";
+    } else if(rando === 14){
+      c+="E";
+    } else if(rando === 15){
+      c+="F"
+    } else{
+      c+=rando;
+    }
+  }
+  console.log(c);
+  return c;
+}
+
 // UI logic
 
 window.addEventListener("load", function(){
@@ -59,9 +83,10 @@ window.addEventListener("load", function(){
 
   const sp1 = document.createElement("span");
   sp1.append("hi");
+  let c = "color: #9901AD"
+  sp1.setAttribute("style", randomColor())
   const targetResults = document.querySelector("#crazyIdea")
   targetResults.append(sp1);
-  console.log(sp1);
 });
 
 function displayResults(numArray){
