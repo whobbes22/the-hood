@@ -12,16 +12,18 @@ function transform(num){
   let transferArray = [1,2,3];
   for(let i =0; i<=num; i++){
     
-    console.log(transferArray.includes(i),i);
+   // console.log(transferArray.includes(i),i);
     let iArray = i.toString().split("");
+    console.log(iArray.includes("1"),iArray.includes("2"),iArray.includes("3"));
+    
     console.log(iArray);
 
-  if(i === 1){
-    numArray.push("beep");
-  } else if (i === 2){
-    numArray.push("boop");
-  } else if(i === 3){
-    numArray.push("the hood");
+  if(iArray.includes("3")){
+    numArray.push("The hood");
+  } else if (iArray.includes("2")){
+    numArray.push("Boop!");
+  } else if(iArray.includes("1")){
+    numArray.push("Beep!");
   } else{
     numArray.push(i);
   }
