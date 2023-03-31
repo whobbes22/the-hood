@@ -6,3 +6,7 @@ body{
   text-align: center;
   color: #9901AD  ;
 }
+
+.hidden{
+  display: none;
+}
