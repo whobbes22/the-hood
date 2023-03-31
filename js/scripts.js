@@ -16,7 +16,6 @@ function getName(){
 function transformReverse(event){
   event.preventDefault();
   transform(true);
-
 }
 
 function notTransformReverse(event){
@@ -56,8 +55,16 @@ window.addEventListener("load", function(){
   const rev = document.querySelector("button#reversed")
   num.addEventListener("click", notTransformReverse);
   rev.addEventListener("click", transformReverse);
+
+
+  const sp1 = document.createElement("span");
+  sp1.append("hi");
+  const targetResults = document.querySelector("#crazyIdea")
+  targetResults.append(sp1);
+  console.log(sp1);
 });
 
 function displayResults(numArray){
   document.querySelector("p#results").innerText = numArray;
+  
 }
