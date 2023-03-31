@@ -8,16 +8,23 @@ function getInput(event){
 
 function transform(num){
 
-  if(num === 1){
-    console.log("beep");
-  } else if (num === 2){
-    console.log("boop");
-  } else{
-    console.log("the hood");
-  }
   let numArray = [];
+  let transferArray = [1,2,3];
   for(let i =0; i<=num; i++){
+    
+    console.log(transferArray.includes(i),i);
+    let iArray = i.toString().split("");
+    console.log(iArray);
+
+  if(i === 1){
+    numArray.push("beep");
+  } else if (i === 2){
+    numArray.push("boop");
+  } else if(i === 3){
+    numArray.push("the hood");
+  } else{
     numArray.push(i);
+  }
     
   }
   console.log(numArray);
