@@ -8,15 +8,16 @@ This project will take an inputted number and transform the certain numbers into
 ## Technologies used: 
 - HTML
 - Java Script
+- CSS
 
 ## Setup:
 - Clone repository to your desktop
 - Navigate to the top level of the directory
 - open index.html into browser of your choice
-- Enter a number in the input field and hit go
+- Enter a number in the input field and hit any of the buttons.
 
 ## Known bugs:
-*N/A*
+- when picking reverse it will reverse every character instead of the word (some may consider this a feature)
 
 ## Copyright and license:
 Code Copyright 2023 Joseph Wahbeh under the MIT License
