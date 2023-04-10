@@ -7,13 +7,13 @@ This project will take an inputted number and transform the certain numbers into
 
 ## Technologies used: 
 - HTML
-- Java Script
+- JavaScript
 - CSS
 
 ## Setup:
 - Clone repository to your desktop
 - Navigate to the top level of the directory
-- open index.html into browser of your choice
+- open "index.html" into browser of your choice
 - Enter a number in the input field and hit any of the buttons.
 
 ## Known bugs:
